@@ -6,23 +6,31 @@ namespace PlacesBeen.Controllers
 {
   public class PlaceController : Controller
   {
-    [HttpGet("/project")]
+    [HttpGet("/place")]
     public ActionResult Index()
     {
-      return View();
+      List<Place> allPlaces = Place.GetAll();
+      return View(allPlaces);
     }
     
-    [HttpGet("/project/new")]
+    [HttpGet("/place/new")]
     public ActionResult New()
     {
       return View();
     }
 
-    [HttpPost("/project")]
-    public ActionResult Create()
+    [HttpPost("/place")]
+    public ActionResult Create(string cityName)
     {
-      // Packer myItems = new Packer(items);
+      Place myPlaces = new Place(cityName);
       return RedirectToAction("Index");
+    }
+    
+    [HttpPost("/place/delete")]
+    public ActionResult DeleteAll()
+    {
+      Place.ClearAll();
+      return View();
     }
   }
 }
