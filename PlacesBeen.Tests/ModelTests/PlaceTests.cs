@@ -6,8 +6,13 @@ using PlacesBeen.Models;
 namespace PlacesBeen.Tests
 {
   [TestClass]
-  public class PlaceTests
+  public class PlaceTests : IDisposable
   {
+    public void Dispose()
+    {
+      Place.ClearAll();
+    }
+
     [TestMethod]
     public void PlaceConstructor_CreatesInstanceOfPlace_Place()
     {
@@ -22,18 +27,23 @@ namespace PlacesBeen.Tests
       string result = newPlace.CityName;
       Assert.AreEqual(cityName, result);
     }
-  [TestMethod]
+    [TestMethod]
     public void SetCityName_SetCityName_String()
     {
-      
       string cityName = "Seattle";
       Place newPlace = new Place(cityName);
-    
       string cityName2 = "Chicago";
       newPlace.CityName = cityName2;
       string result = newPlace.CityName;
       Assert.AreEqual(cityName2, result);
   }
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_PlaceList()
+    {
+      List<Place> newList = new List<Place> {};
+      List<Place> result = Place.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
 
   }
 }
