@@ -9,10 +9,10 @@ namespace PlacesBeen.Tests
   public class PlaceTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void PlaceConstructor_CreatesInstanceOfPlace_Place()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
-      Assert.AreEqual(EXPECTED RESULT, CODE TO TEST);
+      Place newPlace = new Place();
+      Assert.AreEqual(typeof(Place), newPlace.GetType());
     }
   }
 }
