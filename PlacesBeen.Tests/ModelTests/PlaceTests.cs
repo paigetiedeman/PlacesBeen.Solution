@@ -22,5 +22,18 @@ namespace PlacesBeen.Tests
       string result = newPlace.CityName;
       Assert.AreEqual(cityName, result);
     }
+  [TestMethod]
+    public void SetCityName_SetCityName_String()
+    {
+      
+      string cityName = "Seattle";
+      Place newPlace = new Place(cityName);
+    
+      string cityName2 = "Chicago";
+      newPlace.CityName = cityName2;
+      string result = newPlace.CityName;
+      Assert.AreEqual(cityName2, result);
+  }
+
   }
 }
