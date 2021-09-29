@@ -1,9 +1,10 @@
 [![Language][language-shield]][language-url]
+[![Language][languageH-shield]][languageH-url]
 [![MIT License][license-shield]][license-url]
 
 # Places Been
 
-#### This is a C# web application ...
+#### This is a C# web application for users to input Places they've been.
 
 #### _By Paige Tiedeman_
 
@@ -16,7 +17,7 @@
 
 ## Description
 
-This web application takes users inputs of items and places them in a UL list using RESTful routing.
+This web application takes users inputs of places them in a UL list using RESTful routing.
 
 ## Installation Requirements
 
@@ -26,10 +27,11 @@ This web application takes users inputs of items and places them in a UL list us
 * _Commit and push your .gitignore file to your repo_
 * _Make sure to have .NET 5.0 installed_
 * _Run `$ dotnet restore` to install bin & obj folders_
+* _Run `$ dotnet test` in the test folder to see the passed tests_
 
 
 ## Steps To Use
-* _In your terminal navigate into ProjectName.Solution/ProjectName_
+* _In your terminal navigate into PlacesBeen.Solution/PlacesBeen_
 * _Run `$ dotnet build` to build the site_
 * _Run `$ dotnet run` to start the live server_
 * _Click either button to add or see the list_
@@ -52,3 +54,5 @@ _Paige Tiedeman @ github.com/paigetiedeman_
 [license-url]: https://opensource.org/licenses/MIT
 [language-shield]: https://img.shields.io/badge/Language-C%23-red
 [language-url]: https://docs.microsoft.com/en-us/dotnet/csharp/
+[LanguageH-shield]: https://img.shields.io/badge/Language-HTML-blueviolet
+[LanguageH-url]: https://developer.mozilla.org/en-US/docs/Web/HTML
