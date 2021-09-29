@@ -36,12 +36,29 @@ namespace PlacesBeen.Tests
       newPlace.CityName = cityName2;
       string result = newPlace.CityName;
       Assert.AreEqual(cityName2, result);
-  }
+    }
     [TestMethod]
     public void GetAll_ReturnsEmptyList_PlaceList()
     {
       List<Place> newList = new List<Place> {};
       List<Place> result = Place.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsPlaces_PlaceList()
+    {
+      //Arrange
+      string cityName = "Seattle";
+      string cityName2 = "Chicago";
+      Place newCityName = new Place(cityName);
+      Place newCityName2 = new Place(cityName2);
+      List<Place> newList = new List<Place> { newCityName, newCityName2 };
+
+      //Act
+      List<Place> result = Place.GetAll();
+
+
+      //Assert
       CollectionAssert.AreEqual(newList, result);
     }
 
